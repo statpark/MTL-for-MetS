@@ -4,7 +4,8 @@ Multi-task learning appraoch for prediction of metabolic syndrome(MetS)
 # Example 
 create data with 5 classes 
 ```
-x, y = make_multilabel_classification(n_samples = 1000, n_features = 40, n_classes = 5, n_labels = 2, random_state = 0)
+x, y = make_multilabel_classification(n_samples = 1000, n_features = 40,
+                                      n_classes = 5, n_labels = 2, random_state = 0)
 ```
 split the data
 ```
