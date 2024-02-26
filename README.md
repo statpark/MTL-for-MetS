@@ -4,8 +4,7 @@ Multi-task learning appraoch for prediction of metabolic syndrome(MetS)
 # Example 
 create data with 5 classes 
 ```
-x, y = make_multilabel_classification(n_samples = 1000, n_features = 40,
-                                      n_classes = 5, n_labels = 2, random_state = 0)
+x, y = make_multilabel_classification(n_samples = 1000, n_features = 40, random_state = 0)
 ```
 split the data
 ```
@@ -23,7 +22,7 @@ train model
 model = Multi_MLP(n_features = x.shape[1], n_units = 20, dropout = 0.2)
 loss_weight = {'out1': 1/6, 'out2': 1/6, 'out3': 1/6, 'out4': 1/6, 'out5': 1/6, 'out':1/6}
 model.compile(optimizer='adam', 
-              loss=['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy'], 
+              loss=['binary_crossentropy']*6, 
               loss_weights = loss_weight)
 _ = model.fit(x_train, ys_train,  epochs = 600, batch_size = 32, verbose = 0)
 ```
