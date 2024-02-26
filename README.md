@@ -1,6 +1,8 @@
 # MTL-for-MetS
 Multi-task learning appraoch for prediction of metabolic syndrome(MetS) 
+
 <img width="452" alt="arch1" src="https://github.com/statpark/MTL-for-MetS/assets/54830606/a0b35e74-8df5-4735-b313-0d049fc069e7">
+
 # Notice 
 All source codes were listed in file "main.py".
 # Example 
