@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 from sklearn.datasets import make_multilabel_classification
 
-x, y = make_multilabel_classification(n_samples = 1000, n_features = 40, random_state = 0)
+x, y = make_multilabel_classification(n_samples = 1000, n_features = 40, n_classes = 5 random_state = 0)
 ```
 Split the data
 ```
