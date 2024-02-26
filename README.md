@@ -25,7 +25,7 @@ ys_train.append(np.where(np.sum(y_train, axis = 1) >= 3 , 1, 0))
 ys_test = list(y_test.T)
 ys_test.append(np.where(np.sum(y_test, axis = 1) >= 3 , 1, 0))
 ```
-Train model 
+Train the model. You can select weight of each class.
 ```
 from main import *
 
