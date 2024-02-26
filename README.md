@@ -36,7 +36,7 @@ model.compile(optimizer='adam',
               loss_weights = loss_weight)
 _ = model.fit(x_train, ys_train,  epochs = 600, batch_size = 32, verbose = 0)
 ```
-Check results 
+Check prediction result
 ```
 from sklearn.metrics import roc_auc_score
 
