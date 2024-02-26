@@ -41,3 +41,11 @@ from sklearn.metrics import roc_auc_score
 prob = model.predict(x_test, verbose = 0)[5]
 roc_auc_score(ys_test[5], prob)
 ```
+Compare results with other models 
+```
+from catboost import CatboostClassifier
+
+cat = CatboostClassifier(random_state = 0, silent = True)
+_ = model.fit(x_train, ys_train[5])
+prob = model.predict_proba(x_test)[:,1]
+roc_auc_score(ys_test[5], prob)
