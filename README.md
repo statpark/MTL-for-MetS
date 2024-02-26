@@ -1,6 +1,8 @@
 # MTL-for-MetS
 Multi-task learning appraoch for prediction of metabolic syndrome(MetS) 
 
+# Notice 
+All source codes were listed in file "main.py".
 # Example 
 Create data with 5 classes 
 ```
