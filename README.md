@@ -17,3 +17,17 @@ ys_train.append(np.where(np.sum(y_train, axis = 1) >= 3 , 1, 0))
 ys_test = list(y_test.T)
 ys_test.append(np.where(np.sum(y_test, axis = 1) >= 3 , 1, 0))
 ```
+train model 
+```
+model = Multi_MLP(n_features = x.shape[1], n_units = 20, dropout = 0.2)
+loss_weight = {'out1': 1/6, 'out2': 1/6, 'out3': 1/6, 'out4': 1/6, 'out5': 1/6, 'out':1/6}
+model.compile(optimizer='adam', 
+              loss=['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy'], 
+              loss_weights = loss_weight)
+_ = model.fit(x_train, ys_train,  epochs = 600, batch_size = 32, verbose = 0)
+```
+check results 
+```
+prob = model.predict(x_test, verbose = 0)[5]
+roc_auc_score(ys_test[5], prob)
+```
